@@ -110,7 +110,7 @@ export default function Home() {
           </p>
 
           <h1 className="text-4xl font-extrabold leading-tight text-[#1F1F1F] md:text-6xl">
-            Ciee udah jadi maba UNAIR nihh ✨
+            Ciee udah jadi maba UNAIR nihh
           </h1>
 
           <p className="mt-5 max-w-xl text-lg leading-8 text-gray-700">
@@ -315,8 +315,8 @@ export default function Home() {
                 Kalau mau tanya admin lewat WhatsApp?
               </summary>
               <p className="mt-3 text-sm leading-6 text-gray-600">
-                Kamu bisa hubungi admin melalui WhatsApp di nomor yang tersedia
-                pada bio atau kontak UnairKita.
+                Kamu bisa hubungi admin melalui WhatsApp:
+                083198091631 (Fadlu)
               </p>
             </details>
           </div>
