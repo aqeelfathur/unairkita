@@ -730,17 +730,49 @@ export default function OrderPage() {
 
                 <div>
                   <label className="mb-2 block text-sm font-medium">Qty</label>
-                  <input
-                    type="number"
-                    min={1}
-                    value={qty}
-                    onChange={(event) => {
-                      const value = Number(event.target.value);
-                      setQty(value < 1 ? 1 : value);
-                      setSizes({});
-                    }}
-                    className="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-[#294c77]"
-                  />
+                  <div className="flex items-center rounded-xl border border-gray-300">
+                    <button
+                        type="button"
+                        onClick={() => {
+                        setQty((prev) => {
+                            const nextQty = Math.max(1, prev - 1);
+                            if (nextQty !== prev) setSizes({});
+                            return nextQty;
+                        });
+                        }}
+                        className="flex h-12 w-12 items-center justify-center rounded-l-xl text-xl font-bold text-[#294c77] transition hover:bg-[#bee9f8]"
+                    >
+                        -
+                    </button>
+
+                    <input
+                        type="text"
+                        inputMode="numeric"
+                        value={qty}
+                        onChange={(event) => {
+                        const onlyNumber = event.target.value.replace(/\D/g, "");
+                        const value = Number(onlyNumber || 1);
+
+                        setQty(value < 1 ? 1 : value);
+                        setSizes({});
+                        }}
+                        className="h-12 w-full border-x border-gray-300 text-center font-semibold outline-none"
+                    />
+
+                    <button
+                        type="button"
+                        onClick={() => {
+                        setQty((prev) => {
+                            const nextQty = prev + 1;
+                            setSizes({});
+                            return nextQty;
+                        });
+                        }}
+                        className="flex h-12 w-12 items-center justify-center rounded-r-xl text-xl font-bold text-[#294c77] transition hover:bg-[#bee9f8]"
+                    >
+                        +
+                    </button>
+                    </div>
                 </div>
               </div>
 
