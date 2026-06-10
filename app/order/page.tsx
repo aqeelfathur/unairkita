@@ -675,6 +675,14 @@ export default function OrderPage() {
 
             <section className="rounded-3xl bg-white p-6 shadow-sm">
               <h2 className="text-xl font-bold">Tambah Produk</h2>
+              <a
+                href="https://docs.google.com/document/d/1zaLqjqa4dku4_3HEWop9htti9yvbFS06J4LhXlRyK78/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 inline-block text-sm text-[#294c77] underline hover:text-[#1f3c60]"
+              >
+                Klik di sini untuk melihat size chart
+              </a>
 
               <div className="mt-5 flex gap-3">
                 <button
