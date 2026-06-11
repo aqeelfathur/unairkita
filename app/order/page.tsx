@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useMemo, useState } from "react";
 
 type ProductType = "bundle" | "single";
@@ -591,7 +592,7 @@ export default function OrderPage() {
     <main className="min-h-screen bg-[#bee9f8] px-4 py-8 text-[#1F1F1F] md:px-8">
       <section className="mx-auto max-w-6xl">
         <div className="mb-8">
-          <div className="mb-6 flex justify-center">
+          <div className="mb-6 flex flex-col items-center justify-center gap-4 md:flex-row md:justify-between">
             <div className="relative h-24 w-24">
               <Image
                 src="/k.png"
@@ -600,6 +601,13 @@ export default function OrderPage() {
                 className="object-contain"
               />
             </div>
+
+            <Link
+              href="/"
+              className="inline-flex items-center justify-center rounded-full border border-[#294c77] bg-white px-5 py-3 text-sm font-semibold text-[#294c77] transition hover:bg-[#bee9f8]"
+            >
+              Kembali ke Home
+            </Link>
           </div>
 
           <p className="mb-2 text-sm font-semibold uppercase tracking-[0.3em] text-[#294c77]">
