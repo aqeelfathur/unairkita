@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Unair Kita",
+  title: "UnairKita",
   description: "Sedia OSPEK KIT tanpa ribet!",
 };
 
